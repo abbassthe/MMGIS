@@ -1,0 +1,17 @@
+{
+    "defaultIcon": "a material design icon https://pictogrammers.com/library/mdi/ identifier",
+    "description": "A quick description of the tool's capabilities.",
+    "descriptionFull": {
+        "title": "A longer description of the tool's capabilities.",
+        "example": {
+            "A example object of the configuration variables the tool accepts": "value"
+        }
+    },
+    "hasVars": true,
+    "name": "Chart",
+    "toolbarPriority": 3,
+    "paths": {
+        "ChartTool": "essence/Tools/Chart/ChartTool"
+    },
+    "expandable": false
+}

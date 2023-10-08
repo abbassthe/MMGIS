@@ -1,0 +1,17 @@
+{
+    "defaultIcon": "information-variant",
+    "description": "Display the geojson properties field of a clicked point.",
+    "descriptionFull": {
+        "title": "",
+        "example": {
+            "sortAlphabetically": true
+        }
+    },
+    "hasVars": true,
+    "name": "Info",
+    "toolbarPriority": 3,
+    "paths": {
+        "InfoTool": "essence/Tools/Info/InfoTool"
+    },
+    "expandable": true
+}
