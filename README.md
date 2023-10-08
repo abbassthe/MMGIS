@@ -7,8 +7,6 @@
 
 <pre align="center">Spatial Data Infrastructure for Planetary Missions</pre>
 
-<span style="display:block;text-align:center">![Example](/documentation/images/Full_Example.![Uploading IMG-20231008-WA0034.jpg…]()
-png)</span>
 - fft analysis
 ---![IMG-20231008-WA0036](https://github.com/abbassthe/MMGIS/assets/47321004/bcfedb09-3fa7-48a2-b008-de0d8766b5f2)
 - heatmaps
