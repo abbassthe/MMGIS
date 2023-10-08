@@ -23,9 +23,9 @@ def ReprojectCoords(coords,src_srs,tgt_srs):
     trans_coords=[]
     transform = osr.CoordinateTransformation( src_srs, tgt_srs)
     for x,y in coords:
-        print(x)
-        print(y)
-        x,y,z = transform.TransformPoint(x,y)
+        print(type(x))
+        print(type(y))
+        x,y,z = transform.TransformPoint(x,y,0)
         trans_coords.append([x,y])
     return trans_coords
 

@@ -38,4 +38,4 @@ def get_meta_data(year,month,day,file_dir,folder,username,password):
            response  = s.get('https://e4ftl01.cr.usgs.gov//ECOB/ECOSTRESS/ECO2LSTE.001/2023.10.06/'+f'{links[i][9:end+3]}')
            with open(f'{links[i][9:end+3]}', 'wb') as file:
             file.write(response.content)
-get_meta_data(2023,10,'06','Users\abbas\OneDrive\Desktop\programmingprojects\GroupChatBot\import selenuim.py','ECO2LSTE.001','spaceappsaubteam','d84tUeA3u*58TKW')
+get_meta_data(2023,10,'Missions\data','Missions','ECO2LSTE.001','spaceappsaubteam','d84tUeA3u*58TKW')
