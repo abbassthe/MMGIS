@@ -4,15 +4,6 @@ from osgeo import gdal,ogr,osr
 
 def GetExtent(gt,cols,rows):
     ''' Return list of corner coordinates from a geotransform
-
-        @type gt:   C{tuple/list}
-        @param gt: geotransform
-        @type cols:   C{int}
-        @param cols: number of columns in the dataset
-        @type rows:   C{int}
-        @param rows: number of rows in the dataset
-        @rtype:    C{[float,...,float]}
-        @return:   coordinates of each corner
     '''
     ext=[]
     xarr=[0,cols]
@@ -28,19 +19,12 @@ def GetExtent(gt,cols,rows):
 
 def ReprojectCoords(coords,src_srs,tgt_srs):
     ''' Reproject a list of x,y coordinates.
-
-        @type geom:     C{tuple/list}
-        @param geom:    List of [[x,y],...[x,y]] coordinates
-        @type src_srs:  C{osr.SpatialReference}
-        @param src_srs: OSR SpatialReference object
-        @type tgt_srs:  C{osr.SpatialReference}
-        @param tgt_srs: OSR SpatialReference object
-        @rtype:         C{tuple/list}
-        @return:        List of transformed [[x,y],...[x,y]] coordinates
     '''
     trans_coords=[]
     transform = osr.CoordinateTransformation( src_srs, tgt_srs)
     for x,y in coords:
+        print(x)
+        print(y)
         x,y,z = transform.TransformPoint(x,y)
         trans_coords.append([x,y])
     return trans_coords
@@ -53,6 +37,7 @@ def AutoGdal2Tiles(raster):
     subprocess.Popen(gdal2tiles)
 
 raster=sys.argv[1]
+print(raster)
 ds=gdal.Open(raster)
 
 gt=ds.GetGeoTransform()
