@@ -15,9 +15,6 @@ def xml2geojson(file):
     tree = ET.parse(f"{file}")
     root = tree.getroot()
     req = root.find('GranuleURMetaData')
-    print(req[1].text)
-    print(req[8].text)
-    print(req[9][0][0][0].text)
     # Extract bounding coordinates
     west = float(req[9][0][0][0].text)
     north = float(req[9][0][0][1].text)
